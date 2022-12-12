@@ -1,0 +1,13 @@
+﻿@model Product
+@{
+    ViewData["Title"] = "Add Product page";
+}
+<h1>Add new product</h1>
+<form method="post">
+    <input class="form-control" style="margin-top: 10px; margin-bottom: 10px" asp-for=CategoryId placeholder="Category Id" />
+    <input class="form-control" style="margin-top: 10px; margin-bottom: 10px" asp-for=ProductName placeholder="ProductName" />
+    <input class="form-control" style="margin-top: 10px; margin-bottom: 10px" asp-for=ProductColour placeholder="ProductColour" />
+    <input class="form-control" style="margin-top: 10px; margin-bottom: 10px" asp-for=ProductPrice placeholder="ProductPrice" />
+
+    <button type="submit" class="btn btn-success">Save</button>
+</form>

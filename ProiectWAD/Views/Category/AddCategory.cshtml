@@ -1,0 +1,11 @@
+﻿@model Category
+@{
+    ViewData["Title"] = "Add Category page";
+}
+<h1>Add new category</h1>
+<form method="post">
+    <input class="form-control" style="margin-top: 10px; margin-bottom: 10px" asp-for=CategoryName placeholder="CategoryName" />
+    <input class="form-control" style="margin-top: 10px; margin-bottom: 10px" asp-for=CategoryType placeholder="CategoryType" />
+
+    <button type="submit" class="btn btn-success">Save</button>
+</form>

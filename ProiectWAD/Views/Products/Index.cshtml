@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Product>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Product Page";
+}
+
+<a class="btn btn-primary btn-lg" asp-controller="Products" asp-action="AddProduct">Add new Product</a>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ProductId</th>
+      <th scope="col">CategoryId</th>
+      <th scope="col">ProductColour</th>
+      <th scope="col">ProductName</th>
+      <th scope="col">ProductPrice</th>
+    </tr>
+  </thead>
+  <tbody>
+        @foreach(var obj in Model)
+        {
+            <tr>
+                <td>@obj.Id</td>
+                <td>@obj.CategoryId</td>   
+                <td>@obj.ProductColour</td>
+                <td>@obj.ProductName</td>
+                <td>@obj.ProductPrice</td>
+            </tr>
+        }
+  </tbody>
+</table>
